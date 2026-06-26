@@ -11,7 +11,7 @@ class Tapd < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/go-tapd/cli/releases/download/v0.1.7/tapd_0.1.7_Darwin_x86_64.tar.gz"
-      sha256 "30bf3aa00a8ab93e5b75982126854d0f05a1974c6734d4cc55d4aee66b5c46e0"
+      sha256 "052b3d9301663a8b70d31e17953a6d5880e61f6e8559c5f0a104b205acec8a4f"
 
       define_method(:install) do
         bin.install "tapd"
@@ -19,7 +19,7 @@ class Tapd < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/go-tapd/cli/releases/download/v0.1.7/tapd_0.1.7_Darwin_arm64.tar.gz"
-      sha256 "d0ffa504ccd4629740343095089eee21236dacc9d84a6444f6d398c1e97d8c33"
+      sha256 "c8efe413842a5208917fa79dfce0241c371f63d0f9eff53998b65dda690eae1e"
 
       define_method(:install) do
         bin.install "tapd"
@@ -30,14 +30,14 @@ class Tapd < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/go-tapd/cli/releases/download/v0.1.7/tapd_0.1.7_Linux_x86_64.tar.gz"
-      sha256 "cac8c133703cdf9cf0df3954f43155f41ed4dcd2a94a13375b9fb4945acb773b"
+      sha256 "f3c929a992de220ba3b7a22d5da1d1a76ba9fa2e176deca1e19366eaa63f8307"
       define_method(:install) do
         bin.install "tapd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/go-tapd/cli/releases/download/v0.1.7/tapd_0.1.7_Linux_arm64.tar.gz"
-      sha256 "d66d33a51e8bd7da8cb64382b001c38fc901e0ef555f2e234f50677b36300465"
+      sha256 "50f289bbe403f958963ca685be37c5c02dbd5c754304c8878771870c7a7f551d"
       define_method(:install) do
         bin.install "tapd"
       end
