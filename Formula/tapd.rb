@@ -5,21 +5,21 @@
 class Tapd < Formula
   desc "TAPD command line client"
   homepage "https://github.com/go-tapd/cli"
-  version "0.1.8"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/go-tapd/cli/releases/download/v0.1.8/tapd_0.1.8_Darwin_x86_64.tar.gz"
-      sha256 "508c374581480eda9cd95309e90d205413a69a657bcc88b54086a646b0ed5ffa"
+      url "https://github.com/go-tapd/cli/releases/download/v0.2.0/tapd_0.2.0_Darwin_x86_64.tar.gz"
+      sha256 "9dff87f23a7e5c7ba85343f0878186e2ee23bcfb5bea0b525eb97a8e1e72b557"
 
       define_method(:install) do
         bin.install "tapd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/go-tapd/cli/releases/download/v0.1.8/tapd_0.1.8_Darwin_arm64.tar.gz"
-      sha256 "c3e7afe6d9123e3e70f7cda8eb2ff1ab144492f489da60c7b969b6892af622a4"
+      url "https://github.com/go-tapd/cli/releases/download/v0.2.0/tapd_0.2.0_Darwin_arm64.tar.gz"
+      sha256 "4fcf0c025365c2e0335d223b1d19027a5610de19876c42e8837bf1b7b0bd65a5"
 
       define_method(:install) do
         bin.install "tapd"
@@ -29,15 +29,15 @@ class Tapd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-tapd/cli/releases/download/v0.1.8/tapd_0.1.8_Linux_x86_64.tar.gz"
-      sha256 "c4513005f903fc931a217ebc45b040f4d29ac691f55e8fd4ee9e87fdbe1fada3"
+      url "https://github.com/go-tapd/cli/releases/download/v0.2.0/tapd_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "4f0a3c6f923257da710414a2ec19fc640d8053d36ebee9d671478ef63f657208"
       define_method(:install) do
         bin.install "tapd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-tapd/cli/releases/download/v0.1.8/tapd_0.1.8_Linux_arm64.tar.gz"
-      sha256 "3be0ca0f86184c807b5886977ead3ea58c3e94cf5bb708c689fdf1ab9992c256"
+      url "https://github.com/go-tapd/cli/releases/download/v0.2.0/tapd_0.2.0_Linux_arm64.tar.gz"
+      sha256 "434c4fec1c24a812b14a3304e8b829bc68f4c5d607db41d2608fdf4dec8350e8"
       define_method(:install) do
         bin.install "tapd"
       end
